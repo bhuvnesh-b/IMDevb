@@ -7,5 +7,5 @@ from .models import Review, post
 class Reviewform(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['comment']
+        fields = ['comment','name','email']
         
