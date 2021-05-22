@@ -122,15 +122,16 @@
       </div>
     </div>
     <div id="hello">
-    <span class="project-link"> <button id="projectlink-btn">{{object.Link}}</button></span>
-    <form action="{% url 'upvote' post.id %}" method = "POST">       
+    <span class="project-link"><h5>Link :-<h5>{{object.Link|urlizetrunc:30}}></span>
+    <!-- <form action="{% url 'upvote' post.id %}" method = "POST">       
     {% csrf_token %}
     <span id="upvote">
       <button type="submit" class="btn btn-primary" name='post_id' value="{{post.id}}">
               <i class="fas fa-chevron-circle-up fa-2x " style="color: rgb(255, 255, 255);">{{object.totalupvotes}}</i></button>
             </span>
-            </div> 
           </form>
+            </div>  -->
+          </div>
 
     
     <div class="send-message">
@@ -138,7 +139,14 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Add Review & Suggestions</h2>
+              <h2>Add Review & Suggestions</h2><p> <form action="{% url 'upvote' post.id %}" method = "POST">       
+                {% csrf_token %}
+                <span id="upvote">
+                  <button type="submit" class="btn btn-primary" name='post_id' value="{{post.id}}">
+                    <h6>Upvote</h6><i class="fas fa-chevron-circle-up fa-2x " style="color: rgb(255, 255, 255);">{{object.totalupvotes}}</i></button>
+                        </span>
+                      </form></p>
+                      
               <button type="button" class="btn btn-outline-primary"><a href={% url 'review' pk=post.pk %}>POST</a></button>
             </div>
           </div>
@@ -280,6 +288,17 @@ border-radius: 50%;
 display: inline-block
 }
 
+#upvote {
+
+margin-left:75%;
+position:relative;
+margin-top: -100px;
+
+
+
+}
+
+
 .badge {
 padding: 7px;
 padding-right: 9px;
@@ -361,4 +380,13 @@ background-color: rgb(54, 156, 54) !important;
     border: none !important;
     margin-left: 52% !important;
 }
+
+.btn btn-primary{
+  font-size: 16px;
+
+
+}
+
+
+
 </style>
