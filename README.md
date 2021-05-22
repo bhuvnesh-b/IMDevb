@@ -16,7 +16,27 @@
 
 ## DEMO
 
-[alt text](https://github.com/peppapig9978/IMDevb/blob/main/demo/s1.png?raw=true)
+![alt text](https://github.com/peppapig9978/IMDevb/blob/main/demo/s1.png?raw=true)
+
+![alt](https://github.com/peppapig9978/IMDevb/blob/main/demo/s5.png?raw=true)
+![alt](https://github.com/peppapig9978/IMDevb/blob/main/demo/s4.png?raw=true)
+![alt](https://github.com/peppapig9978/IMDevb/blob/main/demo/s2.png?raw=true)
+![alt](https://github.com/peppapig9978/IMDevb/blob/main/demo/s6.png?raw=true)
+![alt](https://github.com/peppapig9978/IMDevb/blob/main/demo/s3.png?raw=true)
+
+## Techstacks We used 
+* HTML/CSS
+* Bootstrap 
+* javascript
+* Django
+* SQLite
+## Things We Included
+* We have included a page on our website which shows the top 10 upvoted projects
+* We categorized the projects as public and private , public projects are open for collaboration .
+ ## Things We want to implement in near future
+ * We are working on to include a search option where we can search the projects and users and view them.
+ * We are planning to make this website more sophisticated by categorizing the projects according their genre which makes it easier for users to view what they wanted to .
+
 
 
 
