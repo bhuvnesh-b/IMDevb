@@ -1,0 +1,174 @@
+body{
+    background-image: url('https://wallpaperaccess.com/full/49907.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 540px;
+}
+
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-family: 'Quattrocento Sans';
+}
+
+
+
+nav li{
+    list-style-type: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.option{
+    background: none;
+    padding: 10px;
+    margin-top: 7px;
+    margin-right: 48px;
+}
+
+.headingstuff{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+
+#MainHeading{
+    color: white;
+    font-size: 65px;
+    font-weight: normal;
+}
+
+.paraBelow{
+    color: white;
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    right: 60px;
+}
+
+#secondline{
+    position: relative;
+    left: 119px;
+    bottom: 7px;
+}
+
+.list{
+    font-family: 'Quattrocento Sans';
+    font-weight: normal;
+}
+
+#firstproject , #secondproject , #thirdproject,#fourthproject , #fifthproject , #sixthproject , #seventhproject , #eighthproject , #ninthproject , #tenthproject{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    position: absolute;
+    top: 452px;
+    left: 176px;
+    border: 2px solid grey;
+}
+.projectbox{
+    padding: 34px;
+    background-color: #7a6eff3a;
+}
+.Projectname{
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+.Projectname:hover{
+    color: darkred;
+}
+
+.Upvotes{
+    float: right;
+    font-size: 35px;
+    color: blue;
+    position: relative;
+    top: 9px;
+    right: 40px;
+}
+.typeofproject{
+    font-size: 15px;
+    background-color: rgba(0, 128, 0, 0.733);
+    background-size: contain;
+    padding: 4px;
+    border: 2px solid grey;
+    border-radius: 15px;
+}
+.description{
+    margin-top: 31px;
+    font-size: 20px;
+}
+.ProfileLink{
+    font-size: 20px;
+    margin-top: 2px;
+    letter-spacing: 1px;
+    color: rgb(30, 30, 212);
+    font-weight: bold;
+    padding-left: 2px;
+}
+.ProfileLink:hover{
+    color: white;
+    background-color: blue;
+}
+#secondproject{
+    position: relative;
+    top: 640px;
+}
+#thirdproject{
+    position: relative;
+    top: 676px;
+}
+#fourthproject{
+    position: relative;
+    top: 708px;
+}
+#fifthproject{
+    position: relative;
+    top: 740px;
+}
+#sixthproject{
+    position: relative;
+    top: 772px;
+}
+#seventhproject{
+    position: relative;
+    top: 804px;
+}
+#eighthproject{
+    position: relative;
+    top: 836px;
+}
+#ninthproject{
+    position: relative;
+    top: 868px;
+}
+#tenthproject{
+    position: relative;
+    top: 900px;
+}
+
+footer h1{
+    position: relative;
+    top: 931px;
+    padding-left: 450px;
+    padding-top: 15px;
+    font-family: 'Quattrocento Sans';
+    padding-bottom : 42px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: #fc636b;
+}
+
+
+

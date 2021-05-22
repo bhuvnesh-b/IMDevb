@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Projects</title>
+    <link rel="stylesheet" href="{%  static "blog/top.css"%}">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <header id="background">
+        <nav id="navigation">
+            <ul id="list">
+                
+                <li class="option"><a href="{% url  'blog-about'%}">About Us</a></li>
+                <li class="option"><a href="{% url 'profile' %}">Profile</a></li>
+                <li class="option"><a href="{% url 'post-create' %}">Contribute</a></li>
+                <li class="option"><a href="{% url 'home' %}">Home</a></li>
+                <li class="option"><a href="{% url 'contact' %}">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="headingstuff">
+            <h1 id="MainHeading">TOP PROJECTS</h1>
+            <p class="paraBelow" id="firstline" >A list of Top 10 projects chosen on the basis of the</p>
+            <p id="secondline" class="paraBelow">amount of upvotes.</p>
+        </div>
+    </header>
+    <main>
+        
+        <div class="list">
+            
+            <div id="firstproject">
+                {% for project in projects|slice:":10" %}
+                
+                <div class="projectbox">
+                    
+                    
+                    <a class="Projectname" href="{% url 'post-detail' project.id %}">{{project.Project_name}}</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up">{{project.totalupvotes}}</i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">{{project.TAGS}}</span>
+                    <p class="description">{{project.Brief}}</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="{{project.user.profile}}" class="ProfileLink">ProfileLink</a>
+                
+                </div>
+                <br><br>
+                {% endfor %}
+                </div>
+                
+            </div>
+        
+            <!-- <div id="secondproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">SecondProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PRIVATE</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="thirdproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">ThirdProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="fourthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">FourthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="fifthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">FifthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="sixthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">SixthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="seventhproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">SeventhProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="eighthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">EighthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="ninthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">NinthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+            <div id="tenthproject">
+                <div class="projectbox">
+                    <a class="Projectname" href="">TenthProjectName</a>
+                    <span class="Upvotes" href=""><i class="fas fa-chevron-circle-up"></i>
+                    </span>
+                    <br>
+                    <br>
+                    <span class="typeofproject">PUBLIC</span>
+                    <p class="description">This is the description of the project !</p>
+                    <span><i class="fas fa-user" ></i></span>
+                    <a href="" class="ProfileLink">ProfileLink</a>
+                </div>
+            </div>
+        </div> -->
+    </main>
+   
+</body>
+</html>
